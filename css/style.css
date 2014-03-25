@@ -42,10 +42,10 @@ body {
 
 body {
   background: #f7f7f7;
-  color: #444444;
+  color: #513B29;
   padding: 0;
   margin: 0;
-  font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: Georgia, "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   font-weight: normal;
   font-style: normal;
   line-height: 1;
@@ -228,21 +228,6 @@ figure img {
   border-radius: 5px;
 }
 
-img.alignright {
-  float: right;
-  margin: 0 0 18px 18px;
-}
-
-img.alignleft {
-  float: left;
-  margin: 0 18px 18px 0;
-}
-
-img.aligncenter {
-  display: block;
-  margin: 18px auto;
-}
-
 .gallery dt, .gallery dl {
   display: inline-block;
 }
@@ -287,8 +272,12 @@ body > header.contain-to-grid {
 }
 
 #content {
-  background-color: #fff;
-  border: 1px solid #ddd;
+  padding: 1rem;
+}
+
+#content-sidebar {
+  padding-right: 4rem;
+  border-right: 1px solid #eee;
 }
 
 .index-card {
@@ -335,7 +324,7 @@ time a:focus {
 
 .post header,
 .page header {
-  margin-bottom: 1.25rem;
+  margin-bottom: 0;
 }
 
 .entry-tags {
@@ -499,6 +488,7 @@ ol.commentlist li section.comment a.comment-reply-link:hover, ol.commentlist li 
 #sidebar ul, .footer-widget ul {
   list-style-type: none;
   margin-left: 0;
+  font-size: 1rem;
 }
 #sidebar .widget h4, .footer-widget .widget h4 {
   text-transform: uppercase;
@@ -508,17 +498,19 @@ ol.commentlist li section.comment a.comment-reply-link:hover, ol.commentlist li 
   color: #888;
   font-weight: 600;
 }
+#sidebar h3{
+  font-size: 1.2rem;
+}
 
 footer.full-width {
-  background-color: #fff;
-  border-top: 1px solid #ccc;
-  padding-top: 3rem;
+  background: none;
 }
 footer.full-width p {
   font-size: 0.875rem;
+  color:#aaa;
 }
 footer.full-width a {
-  color: #666;
+  color: #fff;
   font-size: 0.9375rem;
 }
 footer.full-width a:hover, footer.full-width a:focus {
@@ -534,8 +526,42 @@ footer.full-width .love-reverie {
 }
 
 .f-topbar-fixed > .container {
-  margin-top: 2rem;
+  margin-top: 0rem;
 }
+
+.intro{
+  font-weight: 600;
+}
+p{
+  font-size: 1rem;
+}
+p:first-child{
+  font-size:1rem;
+}
+.entry-content img{
+  float: none;
+  margin: 0 auto 1rem;
+  display: block;
+}
+.menu-hide{
+  display:none;
+}
+
+/* CONTACT FORM STYLE*/
+#cntctfrm_contact_form input.text, 
+#cntctfrm_contact_form textarea,
+#cntctfrm_contact_message, 
+#cntctfrm_contact_name, 
+#cntctfrm_contact_email,
+#cntctfrm_contact_subject {
+  width: 75%;
+}
+#cntctfrm_contact_form label{
+  padding-top:1rem;
+  color: #D15439;
+  text-tra
+}
+/* END CONTACT FORM STYLE */
 
 @media only screen {
   .entry-author .avatar {
@@ -544,17 +570,85 @@ footer.full-width .love-reverie {
 }
 @media only screen and (min-width: 40.063em) {
   #content {
-    padding: 3.125rem;
+    padding: 2rem 0;
   }
 
   .entry-author {
     margin: 3.125rem -3.125rem;
   }
+  p{
+    font-size:1.1rem;
+  }
+  p:first-child{
+  font-size:1.2rem;
+}
+  h1, h2, h3, h4, h5, h6 {
+    line-height: 1.4;
+  }
+
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+  }
+
+  h4 {
+    font-size: 1rem;
+  }
+  ul{
+    font-size:1.1rem;
+  }
+
+  img.alignright {
+  float: right;
+  margin: 0 0 18px 18px;
+  }
+
+  img.alignleft {
+    float: left;
+    margin: 0 18px 18px 0;
+  }
+
+  img.aligncenter {
+    display: block;
+    margin: 18px auto;
+  }
+  .menu-hide{
+  display:block;
+  }
 }
 @media only screen and (min-width: 64.063em) {
+   #content {
+    padding: 4rem 0;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    line-height: 1.4;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.7rem;
+  }
+
+  h3 {
+    font-size: 1.6rem;
+  }
+
+  h4 {
+    font-size: 1.5rem;
+  }
   #sidebar {
-    padding-left: 1.875rem;
-    padding-right: 0;
+    padding: 3.75rem 2rem;
     margin-top: 0;
   }
 

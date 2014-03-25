@@ -109,4 +109,24 @@ if ( ! function_exists( 'reverie_entry_meta' ) ) {
         echo '<time class="updated" datetime="'. get_the_time('c') .'" pubdate>'. get_the_time('F jS, Y') .'</time>';
     }
 };
+
+// Breadcrum
+function the_breadcrumb() {
+	if (!is_home()) {
+		echo '<a href="';
+		echo get_option('home');
+		echo '">';
+		bloginfo('name');
+		echo "</a> » ";
+		if (is_category() || is_single()) {
+			the_category('title_li=');
+			if (is_single()) {
+				echo " » ";
+				the_title();
+			}
+		} elseif (is_page()) {
+			echo the_title();
+		}
+	}
+}
 ?>
